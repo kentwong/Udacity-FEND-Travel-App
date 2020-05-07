@@ -1,0 +1,52 @@
+@import "variables";
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: $body-font;
+}
+
+main {
+    flex: 2;
+    background-color: $yellow;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+
+    h2 {
+        padding: 0 5px;
+    }
+}
+
+strong {
+    font-weight: 800;
+}
+
+#results {
+    padding: 20px 40px;
+    margin: 0.75rem auto;
+    line-height: 1.875rem;
+    color: $black;
+    background-color: $trans-grey;
+
+    #trip-location {
+        color: $red;
+    }
+
+    #icon-forecast {
+        float: right;
+    }
+
+    .icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+#cityImg {
+    width: 100%;
+    margin: 20px auto;
+}

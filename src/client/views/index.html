@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../media/logo.png" alt="travel app logo">
+        <h1>Travel Planner</h1>
+    </header>
+
+    <main>
+        <section>
+            <strong>
+                <h2>Enter destination and date to check details:</h2>
+            </strong>
+            <form>
+                <label for="location-name">Destination:</label>
+                <input id="location-name" type="text" name="input" value="" placeholder="Destination">
+                <label for="start-date">Start Date:</label>
+                <input id="start-date" type="date" name="start-date" value="">
+                <label for="end-date">End Date:</label>
+                <input id="end-date" type="date" name="end-date" value="">
+                <input class="btn" id="submit" type="submit" name="" value="Submit">
+            </form>
+        </section>
+        <section>
+            <strong>
+                <h2>Trip Results:</h2>
+            </strong>
+            <div id="results">
+                <div id="warning"></div>
+                <div id="trip-location"></div>
+                <div id="trip-date"></div>
+                <div id="trip-away"></div>
+                <div id="forecast">
+                    <div id="icon-forecast"></div>
+                    <div id="temp-forecast"></div>
+                    <div id="desc-forecast"></div>
+                </div>
+                <div id="pic"></div>
+                <button class="btn" onclick="window.print()">Print or Export to PDF</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;Udacity & Travel Planner 2020 with &hearts;</p>
+    </footer>
+
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
